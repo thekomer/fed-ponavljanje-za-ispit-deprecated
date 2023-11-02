@@ -2,7 +2,7 @@
   "name": "fed-ponavljanje-za-ispit-deprecated",
   "displayName": "FED ponavljanje za ispit (deprecated)",
   "description": "FED ponavljanje za ispit (deprecated)",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.70.2"
   },
