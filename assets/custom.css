@@ -1,0 +1,46 @@
+body {
+  font-family: var(--vscode-editor-font-family);
+  margin-left: 3rem;
+}
+
+nav {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.command-wrapper {
+  position: relative;
+}
+
+.command-wrapper + h2 {
+  margin-top: 3rem;
+}
+
+.btn-copy {
+  background-color: transparent;
+  /* border: 1px solid var(--vscode-menu-selectionForeground); */
+  border: 1px solid #ffffff22;
+  /* color: var(--vscode-menu-selectionForeground); */
+  color: #ffffff66;
+  cursor: pointer;
+  padding: 4px 8px;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+}
+
+pre {
+  /* background-color: var(--vscode-menu-selectionBackground); */
+  border-radius: 3px;
+  /* color: var(--vscode-menu-selectionForeground); */
+  font-size: 1rem;
+  margin-bottom: 1.75rem;
+  padding: 0.5rem 0.75rem;
+}
