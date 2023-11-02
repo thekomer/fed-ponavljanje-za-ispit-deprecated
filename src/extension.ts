@@ -3,12 +3,12 @@ import { join } from 'path';
 import { getWebviewContent } from './webviewContent';
 
 export function activate(context: vscode.ExtensionContext) {
-	// console.log('Your extension "fed-ponavljanje-za-ispit" is now active!');
-	let test = vscode.commands.registerCommand('fed-ponavljanje-za-ispit.test', () => {
+	// console.log('Your extension "fed-ponavljanje-za-ispit-deprecated" is now active!');
+	let test = vscode.commands.registerCommand('fed-ponavljanje-za-ispit-deprecated.test', () => {
 		vscode.window.showInformationMessage('Hello World from FED ponavljanje za ispit!');
 	});
 
-	let webView = vscode.commands.registerCommand('fed-ponavljanje-za-ispit.webView', () => {
+	let webView = vscode.commands.registerCommand('fed-ponavljanje-za-ispit-deprecated.webView', () => {
 		const assetsRoot = vscode.Uri.file(join(context.extensionPath, 'assets'));
 
 		const panel = vscode.window.createWebviewPanel(
@@ -40,7 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
 		);
 	});
 
-	let mdView = vscode.commands.registerCommand('fed-ponavljanje-za-ispit.mdView', () => {
+	let mdView = vscode.commands.registerCommand('fed-ponavljanje-za-ispit-deprecated.mdView', () => {
 		const mdFile = vscode.Uri.file(join(context.extensionPath, 'assets/ponavljanje.md'));
 		vscode.commands.executeCommand("markdown.showPreview", mdFile);
 	});

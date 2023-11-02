@@ -9,7 +9,6 @@
   "categories": [
     "Education"
   ],
-  "activationEvents": [],
   "repository": {
     "type": "git",
     "url": "git@github.com:thekomer/FED-Ponavljanje-za-ispit-deprecated"
@@ -24,19 +23,24 @@
   "contributes": {
     "commands": [
       {
-        "command": "fed-ponavljanje-za-ispit.test",
+        "command": "fed-ponavljanje-za-ispit-deprecated.test",
         "title": "FED-dep: test"
       },
       {
-        "command": "fed-ponavljanje-za-ispit.webView",
+        "command": "fed-ponavljanje-za-ispit-deprecated.webView",
         "title": "FED-dep: Web View"
       },
       {
-        "command": "fed-ponavljanje-za-ispit.mdView",
+        "command": "fed-ponavljanje-za-ispit-deprecated.mdView",
         "title": "FED-dep: MarkDown View"
       }
     ]
   },
+  "activationEvents": [
+    "onCommand:fed-ponavljanje-za-ispit-deprecated.test",
+    "onCommand:fed-ponavljanje-za-ispit-deprecated.webView",
+    "onCommand:fed-ponavljanje-za-ispit-deprecated.mdView"
+  ],
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
