@@ -41,7 +41,7 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	let mdView = vscode.commands.registerCommand('fed-ponavljanje-za-ispit-deprecated.mdView', () => {
-		const mdFile = vscode.Uri.file(join(context.extensionPath, 'assets/ponavljanje.md'));
+		const mdFile = vscode.Uri.file(join(context.extensionPath, 'assets/pon.md'));
 		vscode.commands.executeCommand("markdown.showPreview", mdFile);
 	});
 
