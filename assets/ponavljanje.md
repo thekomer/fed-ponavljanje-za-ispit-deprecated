@@ -1,4 +1,4 @@
-# ALGEBRA ZAVRŠNI
+# FED - ponavljanje
 
 ## <a name="html"></a>HTML &mdash; struktura i sadržaj
 
@@ -1119,21 +1119,24 @@ jednog u drugi
   }
   ```
 
-* Composing
+* Composing - učitavanje css/scss datoteka u našu. Omogućuje modularnost SCSS-a.
+* partials - css datoteka imena koji počinje s underscore (kao `_name.scss`) i služi samo za uključivanje u glavnu datoteku, ne pretvara se u css. Uključuje se s `@use './name'` ili ~~`@import './name'`~~
+
 
   ```SCSS
-  @import './other_sass_file';
+  @import './other_sass_file'; // deprecated
+  @use './other_sass_file';
   ```
 
-* Mixins
+* Mixins - blokovi koda koje možemo ponovno koristiti, odnosno pomažu nam da ne ponavljamo kod. Primaju argumente i vraćaju CSS pravila čime pomažu kreirati dinamike stilove i modularnog koda.
 
   ```SCSS
-  @mixin heading-font {
+  @mixin heading-font {     // definiramo mixin stil
     font-family: sans-serif;
     font-weight: bold;
   }
   h1 {
-    @include heading-font;
+    @include heading-font;  // uključujemo mixin stil
   }
 
   @mixin font-size($n) {
@@ -1151,6 +1154,18 @@ jednog u drugi
     @include pad(15px);
   }
   ```
+* function - scss funkcije - blokovi koda koji omogućuju definiranje  kompleksnih operacija nad sass vrijednostima koje je moguće koristiti više puta. Omogućuju apstrakciju koda.
+
+  ```SCSS
+  @function name($val1, $val2) {
+    @return $val1 * $val2;
+  }
+
+  p {
+    prop: name(2,3);
+  }
+  ```
+
 * For loops
 
   ```SCSS
@@ -1526,6 +1541,32 @@ Kako se naziva proces prilagodbe CSS koda za produkciju, čime se smanjuje veli�
 
 Proces se naziva minifikacija ili minimizacija CSS koda.
 
+## Zadatak
+
+Napravi oblik sa slike u css-u unutar `<div>` elementa. (Na slici je crveni List nagnut u desno).
+
+### Rješenje
+
+```HTML
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        border-top-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+  </html>
+```
+
 ## JavaScript &mdash; klijentsko skriptiranje
 
 ### Što je JavaScript?
@@ -1599,7 +1640,7 @@ Djelokrug (doseg) varijabli:
 
 * Ima par pravila kod imenovanja:
 1. JavaScript razlikuje velika i mala slova
-2. Naziv mora početi sa **slovom**, **podvlakom (_)** ili **znakom dolara ($)**
+2. Naziv mora početi sa **slovom**, **podvlakom (_)** ili **znakom dolara ($)** (*ne znamenka!*)
 3. Sljedeći znakovi mogu biti **slova**, **znamenke**, **podvlake** ili **$**
 4. Ključne riječi se ne smiju koristiti kao identifikatori
 
@@ -2505,7 +2546,7 @@ stranice brišu se
   * definiraju se unutar funkcije te se mogu koristiti samo unutar nje
   * izlaskom iz funkcije brišu se
 * djelokrug bloka
-  * definiraju se unutar bloka {} pomoću ključne riječi let
+  * definiraju se unutar bloka `{}` pomoću ključne riječi let
   * dostupne su samo unutar bloka u kojemu su definirane
   * moraju se deklarirati prije upotrebe te se ne mogu ponovo deklarirati
 
@@ -2521,6 +2562,8 @@ var lastName = "Doe";
 var fullName = firstName + " " + lastName;
 /* ili */
 var fullName = firstName.concat(" ", lastName);
+/* ili */
+const fullName = `${firstName} ${lastName}`;
 ```
 
 ### Zadatak
@@ -2541,6 +2584,25 @@ if (z === 2) {
 } else {
   x = 5;
 }
+```
+### Zadatak
+
+Napravi funkciju koja prima dva broja kao parametre i vrati veći broj. Ako su brojevi isti onda vrati prvi broj.
+
+#### Rješenje
+
+```JS
+  function veci(br1, br2) {
+    if (br1 === br2) {
+      return broj1;
+    } else if (br1 > br2) {
+      return broj1;
+    } else return broj2;
+  }
+```
+ili
+```JS
+  const veci = (a,b) => (a >= b ? a : b) ;
 ```
 
 ### Zadatak
@@ -2657,6 +2719,18 @@ Definira:
 - svojstva svih HTML elemenata
 - metode pristupa svim HTML elementima
 - događaje za sve HTML elemente.
+
+### Zadatak
+
+Napiši js kod koji će uvijek napisati trenutačnu godinu.
+
+#### Rješenje
+
+```JS
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+console.log("Current year is:", currentYear);
+```
 
 ### Zadatak
 
@@ -2812,7 +2886,7 @@ projektu
 ### Node.js
 
 * Node.js je JavaScript runtime environment - razvojna okolina koja omogućuje pokretanje JavaScript programa izvan web preglednika.
-* Uz Node.js instalaciju dolazi i snažan upravitelj programskim paketima - npm (node package manager):
+* npm (node package manager) - snažan upravitelj programskim paketima koji dolazi uz Node.js instalaciju (ne treba ga posebno instalirati)
   * softverski alat koji automatizira proces instaliranja, nadogradnje, konfiguriranja i brisanja računalnih programa ili biblioteka (paketa).
 * naredbe:
   * `npm version` - trenutna verzija npm-a
@@ -2933,6 +3007,12 @@ Napišite Git naredbu za povlačenje promjena s udaljenog na lokalni repozitorij
 git pull
 ```
 
+ili?
+
+```git
+git fetch
+```
+
 ### Zadatak
 
 Napišite Git naredbu za spajanje dvije Git grane kako bi se promjene iz jedne zapisale u drugu (u glavnu granu repozitorija – master).
@@ -2969,7 +3049,7 @@ Snažan upravitelj programskim paketima:
 
 ### Zadatak
 
-Napišite Git naredbu s kojom se lokalno sprema trenutna verzija repozitorija.
+Napišite npm naredbu za instalaciju paketa &quot;lodash&quot; i editiranje package.json datoteke (ovisnost se zapisuje u datoteku package.json).
 
 #### Rješenje
 
