@@ -1546,6 +1546,10 @@ Proces se naziva minifikacija ili minimizacija CSS koda.
 
 Napravi oblik sa slike u css-u unutar `<div>` elementa. (Na slici je crveni List nagnut u desno).
 
+<div align="center">
+  <img src="./media/list.png" alt="crveni list" style="width:30%">
+</div>
+
 ### Rješenje
 
 ```HTML
