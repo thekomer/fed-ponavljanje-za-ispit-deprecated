@@ -22,5 +22,6 @@ Otvara markdown view skripte koja sadrži gradivo za ponavljanje.
 1. Stisni Ctrl+Shift+P i u padajući izbornik upiši "FED".
 2. Pokreni naredbu imena
    1. "FED-dep: Ponavljanje.md" za markdown preview skripte
+   2. "FED-dep: Ponavljanje.md bez slika" za markdown preview skripte bez slika
 
 ## Zahvali mi kasnije :-)

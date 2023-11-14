@@ -19,9 +19,7 @@
   *  ključne riječi unutar uglatih zagrada: `<title>`, `<div>`, `<h1>`, `<p>`, ...
      *  obično dolaze u paru: `<title> </title>`
   * neki elementi nemaju sadržaj ili ne mogu sadržavati pod elemente -> definiraju se samo s jednom oznakom &rarr; npr. `<br>` ili `<br />`
-<div align="center">
-  <img src="./media/htmlTree.jpg" alt="HTML drvo" style="width:50%">
-</div>
+
 
 ### <a name="HTML-atributi"></a>HTML atributi
 
@@ -340,19 +338,12 @@
   </datalist>
         // lista opcija za tekstualan unos s id-em elID
   ```
-<div align="center">
-  <img src="./media/htmlForm.jpg" alt="HTML obrazac" style="width:50%;">
-</div>
 
 # Strukturiranje sadržaja (semantički elementi)
 
 * podjela elemenata:
   * elementi bloka - div: ```<div></div>``` - sadržaj koji grupiramo isključivo za stiliziranje u css-u
   * elementi reda - span: ```<span></span>```
-
-<div align="center">
-    <img src="./media/htmlStruktura1.jpg" alt="HTML obrazac" style="height:200px;">
-</div>
 
 * semantički elementi:
   * ```<header></header>``` - header - uvodni sadržaj
@@ -366,10 +357,6 @@
   * ```<address></address>``` - address - kontakt informacije
   * ```<details></details>``` - details - dodatni podaci (mogu se zatvoriti)
   * ```<summary></summary>``` - summary - vidljiv naslov za details
-
-  <div align="center">
-    <img src="./media/htmlStruktura2.jpg" alt="HTML obrazac" style="height:200px;">
-  </div>
 
 ### Temelji pristupačnosti internetskih stranica
 
@@ -834,9 +821,6 @@ Koji element koristimo za tematsko grupiranje sadržaja?
     * ne mogu sadržavati pod elemente iz grupe blok
     * moguće je utjecati samo na lijevu i desnu stranu ispune i margine
       * gornja i donja ispuna se mogu postaviti (pozadina i okvir okolo), ali neće utjecati na pozicije susjednih elemenata
-
-        <img src="./media/element-reda.png" alt="Element reda" style="width:50%;"/>
-
       * postoje iznimke &rarr;  img, video ...
 
 ### Kako su elementi prikazani
@@ -844,9 +828,6 @@ Koji element koristimo za tematsko grupiranje sadržaja?
 * promjena načina kako su HTML elementi prikazani:
   * `display` &rarr; Način prikazivanja elementa (promjena grupe kojoj pripada)
     * moguće vrijednosti: `inline` / `block` / `inline-block` / `flex` / `grid` / `none` / `...`
-
-      <img src="./media/display1.png" alt="display: block, inline, inline-block" style="height:100px;">
-      <img src="./media/display2.png" alt="display: flexbox, grid" style="height:100px;">
 
 ### Uređivanje elemenata &mdash; dodatna svojstva
 
@@ -887,10 +868,6 @@ svojstvima
 
 ### Izrada layout-a: Flexible Box Layout
 
-<div align="center">
-  <img src="./media/flexbox1.png" alt="display: flexbox skica" style="width:80%;">
-</div>
-
 * pr.:
 
   ```CSS
@@ -921,9 +898,6 @@ svojstvima
     flex-basis: 100%;
   }
   ```
-  <div align="center">
-    <img src="./media/flexbox2.png" alt="display: flexbox primjer" style="width:80%;">
-  </div>
 
 ### CSS transformacije
 
@@ -949,7 +923,6 @@ svojstvima
     transform: translate(50px, 100px);
     }
     ```
-    <img src="./media/transform.png" alt="transform: translate();" style="height:100px;">
 
 ### CSS tranzicije
  * omogućuje prijelaz elementa iz jednog stila u drugi, koji se odvija postepeno u zadanom vremenskom trajanju
@@ -975,11 +948,6 @@ svojstvima
       transform: scale(1.2, 2) skew(10deg, 5deg);
     }
     ```
-    <figure align="center">
-      <img src="./media/transition1.png" alt="transform: translate();" style="width:50%;">
-      <img src="./media/transition2.png" alt="transform: translate();" style="width:50%;">
-      <figcaption> Veličine i boje ne moraju biti u potpunosti točne. </figcaption>
-    </figure>
 
 ### CSS animacije
 
@@ -1428,9 +1396,6 @@ p {
 
 Zadan je `<article>` element koji sadrži tekstualni sadržaj. Koristeći CSS selektirajte element i uredite ga tako da odgovara obliku na slici (pomoću margina centrirajte područje sadržaja elementa). Pretpostavite veličine i boje, one ne moraju biti u potpunosti točne.
 
-<div align="center">
-  <img src="./media/article1.png" alt="transform: translate();" style="width:50%;">
-</div>
 
 #### Rješenje
 
@@ -1448,10 +1413,6 @@ article {
 ### Zadatak
 
 Zadan je `<article>` element koji sadrži tekstualni sadržaj. Koristeći CSS selektirajte element i uredite ga tako da odgovara obliku na slici (pomoću margina područje sadržaja elementa postavite na desnu stranu). Pretpostavite veličine i boje, one ne moraju biti u potpunosti točne.
-
-<div align="center">
-  <img src="./media/article2.png" alt="transform: translate();" style="width:50%;">
-</div>
 
 #### Rješenje
 
@@ -2101,8 +2062,6 @@ izračunavanje datuma
 * Objekt `document` predstavlja našu web stranicu.
 * Ako želite pristupiti bilo kojem elementu HTML stranice, uvijek započinjemo s pristupom objektu dokumenta.
 
-  <img src="./media/dom.png" alt="DOM drvo" style="width:300px;">
-
 #### Selektiranje DOM elementa
 
 * Za mijenjanje DOMa ili elementa u DOMu prvo ga moramo ‘pronaći’ u dokument strukturi i selektirati.
@@ -2404,8 +2363,6 @@ Za to koristimo **className** i **classList** svojstva elemenata.
 ### API - Application Programming Interface
 
 * Sučelje aplikacijskog programa koje se može definirati kao skup metoda komunikacije između različitih softverskih komponenti.
-
-  <img src="./media/API.png" alt="API image" style="width:300px;">
 
 ### AJAX (Asynchronous JavaScript And XML)
 
@@ -2930,8 +2887,6 @@ projektu
 * **Bundling** je proces kombiniranja i optimizacije više modula u jedan ili više proizvodno spremnih paketa
 * pr.: webpack, rollup, browserify, fusebox ...
 
-  <img src="./media/bundler.jpg" alt="Bundler graph" style="width:50%;">
-
 ## Razvojna okolina - Zadaci
 
 ### Zadatak
@@ -3307,8 +3262,6 @@ render() {
   * ažuriranje (**updating**)
   * brisanje iz DOM-a (**unmounting**)
 
-  <img src="./media/lifeCycle.jpg" alt="components lifecycle" style="width:300px;"></img>
-
 * pr.:
 
   ```JS
@@ -3468,8 +3421,6 @@ Najčešći načini za stilizaciju sadržaja komponenti u React-u:
 * **API** = **A**pplication **P**rogramming **I**nterface
 * API-ji omogućavaju aplikacijama da komuniciraju jedna s drugom
 * nas zanimaju mrežni API-ji koji služe za komunikaciju web- aplikacija (React aplikacija) s poslužiteljem na kojem se nalaze podaci
-
-  <img src="./media/ReactAPI.jpg" alt="React API image" style="width:400px;" />
 
 #### implementacija asinkronih operacija putem metode `fetch()`
 

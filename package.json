@@ -25,11 +25,16 @@
       {
         "command": "fed-ponavljanje-za-ispit-deprecated.mdView",
         "title": "FED-dep: Ponavljanje.md"
+      },
+      {
+        "command": "fed-ponavljanje-za-ispit-deprecated.mdViewNoPic",
+        "title": "FED-dep: Ponavljanje.md bez slika"
       }
     ]
   },
   "activationEvents": [
-    "onCommand:fed-ponavljanje-za-ispit-deprecated.mdView"
+    "onCommand:fed-ponavljanje-za-ispit-deprecated.mdView",
+    "onCommand:fed-ponavljanje-za-ispit-deprecated.mdViewNoPic"
   ],
   "scripts": {
     "vscode:prepublish": "npm run compile",

@@ -9,3 +9,4 @@ All notable changes to the "fed-ponavljanje-za-ispit-deprecated" extension will 
 - add markdown view with content
 - changed VSCode compatibility - compatible with v1.53+
 - removed test and webView (webView may come back if I find time/motivation)
+- dodana slike, ali i verzija skripte bez slika
