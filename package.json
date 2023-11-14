@@ -24,7 +24,7 @@
     "commands": [
       {
         "command": "fed-ponavljanje-za-ispit-deprecated.mdView",
-        "title": "FED-dep: MarkDown View"
+        "title": "FED-dep: Ponavljanje.md"
       }
     ]
   },
