@@ -14,7 +14,7 @@ Otvara markdown view skripte koja sadrži gradivo za ponavljanje.
 
 * Klikni na extensions ikonu u "action bar-u" VSCode-a
 * Pronađi ekstenziju tako da u tražilicu upišeš "fed ponavljanje za ispit"
-* za starije verzije VSCode-a (sve do verzije 1.53 iz siječnja 2021.) odaberi ekstenziju "FED ponavljanje za ispit (deprecated)", za novije verzije VSCode-a odaberi "FED ponavljanje za ispit".
+* za starije verzije VSCode-a (ali ne starije od 1.53 iz siječnja 2021.) odaberi ekstenziju "FED ponavljanje za ispit (deprecated)", za novije verzije VSCode-a (1.83 i novije) odaberi "FED ponavljanje za ispit".
 * Klikni na "Install" gumb.
 
 ## Kako se pokreće?
